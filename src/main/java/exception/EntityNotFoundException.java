@@ -7,9 +7,9 @@ public class EntityNotFoundException extends RuntimeException {
     //オブジェクトのタイプ
     private final String entityType;
     //見つからなかったID
-    private final UUID id;
+    private final String id;
 
-    public EntityNotFoundException(String message, String entityType, UUID id) {
+    public EntityNotFoundException(String message, String entityType, String id) {
         super("EntityNotFound entityType=" + entityType + ", id=" + id + ", message=not found");
         this.entityType = entityType;
         this.id = id;
@@ -19,7 +19,7 @@ public class EntityNotFoundException extends RuntimeException {
         return entityType;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
