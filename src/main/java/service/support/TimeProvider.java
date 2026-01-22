@@ -1,4 +1,8 @@
 package service.support;
-//時間取得を1か所にまとめる
-public class TimeProvider {
+
+import java.time.LocalDateTime;
+
+//時間取得
+public interface TimeProvider {
+   LocalDateTime now();
 }
